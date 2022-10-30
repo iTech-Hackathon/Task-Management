@@ -21,6 +21,8 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
 - Sebagai **Anggota**, saya ingin aplikasi tersebut dapat memunculkan project-project dan tugas-tugas project. Dari tugas-tugas project tersebut, **Anggota** dapat mengupdate status pekerjaan (ToDo atau Done)
 
 ![Tolong pakai background putih for better look.](ProjectTask.png)
+<p align="center">Gambar 1. Hubungan project dan tugas</p>
+
 
 # Teknologi
 - **Font End**
