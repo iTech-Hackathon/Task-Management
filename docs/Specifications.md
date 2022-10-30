@@ -37,10 +37,11 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
     - **Anggota** hanya dapat mendaftar menggunakan token, jika token yang digunakan valid dan masih aktif pada rentang waktu pendaftaran yang telah ditentukan oleh **Project Manager**
 
 
-# Teknologi
+# Technology
 - **Font End**
     - React JS
-    - Material Design
+    - Material Design (Design System)
+    - Markdown support (Menggunakan library)
 
 - **Back End**
     - Firebase (untuk hosting, database NoSQL, dll)
