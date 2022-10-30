@@ -20,6 +20,8 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
 - Pada **Sistem**, seharusnya dapat memunculkan project-project yang telah dibuat oleh project manager beserta tugas-tugas nya kepada **Project Manager** dan **Anggota**
 - Sebagai **Anggota**, saya ingin aplikasi tersebut dapat memunculkan project-project dan tugas-tugas project. Dari tugas-tugas project tersebut, **Anggota** dapat mengupdate status pekerjaan (ToDo atau Done)
 
+![Tolong pakai background putih for better look.](ProjectTask.png)
+
 # Teknologi
 - **Font End**
     - React JS
