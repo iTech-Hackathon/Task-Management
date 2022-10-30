@@ -24,12 +24,17 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
     - Token registrasi
 
 # User Story (Non Standard)
-- Sebagai **Project Manager**, saya ingin aplikasi tersebut dapat mengelola (CRUD) project A, project B, dst. Dari project tersebut (misalkan project A) saya ingin mengelola (CRUD) tugas project.
-- Pada **Sistem**, seharusnya dapat memunculkan project-project yang telah dibuat oleh project manager beserta tugas-tugas nya kepada **Project Manager** dan **Anggota**
-- Sebagai **Anggota**, saya ingin aplikasi tersebut dapat memunculkan project-project dan tugas-tugas project. Dari tugas-tugas project tersebut, **Anggota** dapat mengupdate status pekerjaan (ToDo atau Done)
+- Core Feature:
+    - Sebagai **Project Manager**, saya ingin aplikasi tersebut dapat mengelola (CRUD) project A, project B, dst. Dari project tersebut (misalkan project A) saya ingin mengelola (CRUD) tugas project. Disetiap tugas/project, **Project Manager** dapat memberikan judul tugas/project serta memberikan catatan atau deskripsi tugas/project.
+    - Pada **Sistem**, seharusnya dapat memunculkan project-project yang telah dibuat oleh project manager beserta tugas-tugas nya kepada **Project Manager** dan **Anggota**
+    - Sebagai **Anggota**, saya ingin aplikasi tersebut dapat memunculkan project-project dan tugas-tugas project. Dari tugas-tugas project tersebut, **Anggota** dapat mengupdate status pekerjaan (ToDo atau Done)
 
 ![Tolong pakai background putih for better look.](ProjectTask.png)
 <p align="center">Gambar 1. Hubungan project dan tugas</p>
+
+- User Registration Feature:
+    - **Project Manager** bertanggung jawab untuk mengelola registrasi anggota baru dengan membuatkan token pendaftaran.
+    - **Anggota** hanya dapat mendaftar menggunakan token, jika token yang digunakan valid dan masih aktif pada rentang waktu pendaftaran yang telah ditentukan oleh **Project Manager**
 
 
 # Teknologi
