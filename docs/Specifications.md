@@ -14,6 +14,14 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
     - Anggota
         - Melihat tugas (Read)
         - Update status tugas (Update)
+- Pada milestone [0.1.0](https://github.com/iTech-Hackathon/Task-Management/milestone/1), tidak perlu ada fitur personalisasi akun (Foto profil, dll).
+- Kontent deskripsi atau catatan tugas harus mendukung format penulisan Markdown.
+- Untuk meringankan penggunaan [back end](#technology), deskripsi tugas dan project tidak disimpan pada back end. Melainkan disimpan di repo khusus GitHub organization ini dalam bentuk markdown. Sehingga pada back end hanya menyimpan sebgian data yang rinciannya sebagai berikut:
+    - Kode tugas dan project
+    - Judul tugas dan project
+    - Metadata tugas dan project
+    - Status tugas masing-masing anggota
+    - Token registrasi
 
 # User Story (Non Standard)
 - Sebagai **Project Manager**, saya ingin aplikasi tersebut dapat mengelola (CRUD) project A, project B, dst. Dari project tersebut (misalkan project A) saya ingin mengelola (CRUD) tugas project.
