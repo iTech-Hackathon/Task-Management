@@ -66,7 +66,7 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
             "completed_tasks": [
                 {
                     "project": <Projects-ID: String>,
-                    "task": <Tasks-ID: String></Tasks-ID:>
+                    "task": <Tasks-ID: String>
                 },
                 ...
             ]
