@@ -62,7 +62,7 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
     "users": [
         {
             "username": <GitHub-Username: String>,
-            "role": <User-role: String>,
+            "role": <User-Role: String>,
             "completed_tasks": [
                 {
                     "project": <Projects-ID: String>,
