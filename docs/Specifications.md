@@ -39,3 +39,39 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
 
 - **Back End**
     - Firebase (untuk hosting, database NoSQL, dll)
+
+# NoSQL Database Schema
+```
+{
+    "projects": [
+        {
+            "id": <Projects-ID: String>,
+            "title": <Title: String>,
+            "description_url": <Raw-README-URL: String>,
+            "tasks": [
+                {
+                    "id": <Tasks-ID: String>,
+                    "title": <Title: String>
+                    "description_url": <Raw-README-URL: String>
+                },
+                ...
+            ]
+        },
+        ...
+    ],
+    "users": [
+        {
+            "username": <GitHub-Username: String>,
+            "role": <User-role: String>,
+            "completed_tasks": [
+                {
+                    "project": <Projects-ID: String>,
+                    "task": <Tasks-ID: String></Tasks-ID:>
+                },
+                ...
+            ]
+        },
+        ...
+    ]
+}
+```
