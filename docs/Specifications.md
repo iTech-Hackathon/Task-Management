@@ -9,7 +9,6 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
     - Project Manager, dengan hak akses berupa:
         - Mengelola project (Create, Read, Update & Delete)
         - Mengeola tugas project (Create, Read, Update & Delete) 
-        - Membuat token registrasi anggota baru (Create)
         - _Semua fitur yang ada pada role Anggota ..._
     - Anggota, dengan hak akses berupa:
         - Melihat tugas (Read)
@@ -21,7 +20,6 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
     - Judul tugas dan project
     - Metadata tugas dan project
     - Status tugas masing-masing anggota
-    - Token registrasi
     - _TBD._ (To Be Determined)
 
 # User Story (Non Standard)
@@ -33,16 +31,11 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
 ![Tolong pakai background putih for better look.](ProjectTask.png)
 <p align="center">Gambar 1. Hubungan project dan tugas</p>
 
-- User Registration Feature:
-    - **Project Manager** bertanggung jawab untuk mengelola registrasi anggota baru dengan membuatkan token pendaftaran.
-    - **Anggota** hanya dapat mendaftar menggunakan token, dengan syarat, token yang digunakan valid dan masih aktif (Masa aktif ditentukan oleh **Project Manager**)
-
-
-# Technology
+# Technology & Library
 - **Font End**
     - React JS
     - Material Design (Design System)
-    - Markdown support (Menggunakan library)
+    - Markdown parser
 
 - **Back End**
     - Firebase (untuk hosting, database NoSQL, dll)
