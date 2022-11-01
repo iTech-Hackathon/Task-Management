@@ -10,7 +10,7 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
         - Mengelola project (Create, Read, Update & Delete)
         - Mengeola tugas project (Create, Read, Update & Delete) 
         - _Semua fitur yang ada pada role Anggota ..._
-    - Anggota, dengan hak akses berupa:
+    - Member, dengan hak akses berupa:
         - Melihat tugas (Read)
         - Update status tugas (Update)
 - Pada milestone [0.1.0](https://github.com/iTech-Hackathon/Task-Management/milestone/1), tidak perlu ada fitur personalisasi akun (Foto profil, dll).
