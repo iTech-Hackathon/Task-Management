@@ -75,3 +75,27 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
     ]
 }
 ```
+
+- `Projects-ID` \
+    Menggunakan format periode ke pengurusan `[Tahun Sekarang][Digit terakhir tahun depan]-[Project ke N]`. 
+
+    Contoh: 
+    Periode ke pengurusan 2022/2023, project ke 3. Maka ditulis menjadi `20223-3`
+
+- `Tasks-ID` \
+    Menggunakan format yang `[Tugas ke N]`.
+
+    Contoh:
+    Pada project `20223-3` terdapat 10 tugas, dan Project Manager menambahkan 1 tugas lagi. Sehingga menjadi tugas yang baru tersbut memiliki ID `11`
+
+- `Title` \
+    Menyimpan dul/garis besar dari project/tugas yang diberikan.
+
+- `Raw-Readme-URL` \
+    Menyimpan URL deskripsi tugas/project dalam format Markdown yang dapat diambil secara raw/plain text.
+
+- `GitHub-Username` \
+    Username Github anggota, yang sudah terdaftar.
+
+- `User-Role` \
+    Role yang ada pada aplikasi ini, yaitu `Project Manger` dan `Member`
