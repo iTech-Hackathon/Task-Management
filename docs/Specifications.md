@@ -9,9 +9,8 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
     - Project Manager, dengan hak akses berupa:
         - Mengelola project (Create, Read, Update & Delete)
         - Mengeola tugas project (Create, Read, Update & Delete) 
-        - Membuat token registrasi anggota baru (Create)
         - _Semua fitur yang ada pada role Anggota ..._
-    - Anggota, dengan hak akses berupa:
+    - Member, dengan hak akses berupa:
         - Melihat tugas (Read)
         - Update status tugas (Update)
 - Pada milestone [0.1.0](https://github.com/iTech-Hackathon/Task-Management/milestone/1), tidak perlu ada fitur personalisasi akun (Foto profil, dll).
@@ -21,7 +20,6 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
     - Judul tugas dan project
     - Metadata tugas dan project
     - Status tugas masing-masing anggota
-    - Token registrasi
     - _TBD._ (To Be Determined)
 
 # User Story (Non Standard)
@@ -33,16 +31,71 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
 ![Tolong pakai background putih for better look.](ProjectTask.png)
 <p align="center">Gambar 1. Hubungan project dan tugas</p>
 
-- User Registration Feature:
-    - **Project Manager** bertanggung jawab untuk mengelola registrasi anggota baru dengan membuatkan token pendaftaran.
-    - **Anggota** hanya dapat mendaftar menggunakan token, dengan syarat, token yang digunakan valid dan masih aktif (Masa aktif ditentukan oleh **Project Manager**)
-
-
-# Technology
+# Technology & Library
 - **Font End**
     - React JS
     - Material Design (Design System)
-    - Markdown support (Menggunakan library)
+    - Markdown parser
 
 - **Back End**
     - Firebase (untuk hosting, database NoSQL, dll)
+
+# NoSQL Database Schema
+```
+{
+    "projects": [
+        {
+            "id": <Projects-ID: String>,
+            "title": <Title: String>,
+            "description_url": <Raw-README-URL: String>,
+            "tasks": [
+                {
+                    "id": <Tasks-ID: String>,
+                    "title": <Title: String>
+                    "description_url": <Raw-README-URL: String>
+                },
+                ...
+            ]
+        },
+        ...
+    ],
+    "users": [
+        {
+            "username": <GitHub-Username: String>,
+            "role": <User-Role: String>,
+            "completed_tasks": [
+                {
+                    "project": <Projects-ID: String>,
+                    "task": <Tasks-ID: String>
+                },
+                ...
+            ]
+        },
+        ...
+    ]
+}
+```
+
+- `Projects-ID` \
+    Menggunakan format periode ke pengurusan `[Tahun Sekarang][Digit terakhir tahun depan]-[Project ke N]`. 
+
+    Contoh: 
+    Periode ke pengurusan 2022/2023, project ke 3. Maka ditulis menjadi `20223-3`
+
+- `Tasks-ID` \
+    Menggunakan format yang `[Tugas ke N]`.
+
+    Contoh:
+    Pada project `20223-3` terdapat 10 tugas, dan Project Manager menambahkan 1 tugas lagi. Sehingga menjadi tugas yang baru tersbut memiliki ID `11`
+
+- `Title` \
+    Menyimpan dul/garis besar dari project/tugas yang diberikan.
+
+- `Raw-Readme-URL` \
+    Menyimpan URL deskripsi tugas/project dalam format Markdown yang dapat diambil secara raw/plain text.
+
+- `GitHub-Username` \
+    Username Github anggota, yang sudah terdaftar.
+
+- `User-Role` \
+    Role yang ada pada aplikasi ini, yaitu `Project Manger` dan `Member`
