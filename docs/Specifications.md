@@ -47,7 +47,6 @@ Membangun aplikasi yang dapat digunakan untuk memudahkan dalam memberikan tugas 
         {
             "id": <Projects-ID: String>,
             "title": <Title: String>,
-            "description_url": <Raw-README-URL: String>,
             "tasks": [
                 {
                     "id": <Tasks-ID: String>,
