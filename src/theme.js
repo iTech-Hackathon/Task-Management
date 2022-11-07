@@ -12,6 +12,7 @@ export default createTheme({
       main: '#757575',
       light: '#BDBDBD',
       dark: '#424242',
+      contrastText: '#FFFFFF',
     },
     background: {
       default: '#FFFFFF',
