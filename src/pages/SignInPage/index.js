@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
-import Footer from './Footer';
+import TaskManagementLogoDark from '../../assets/Task Management Logo - Dark.png';
 import GitHubSignInButton from './GitHubSignInButton';
+import Footer from './Footer';
 
 export default () => {
   return (
@@ -10,7 +11,10 @@ export default () => {
         display='flex'
         alignItems='center'
         justifyContent='center'
+        flexDirection='column'
       >
+        <img src={TaskManagementLogoDark} width={180} />
+        <Box height={40} />
         <GitHubSignInButton />
       </Box>
       <Footer />
