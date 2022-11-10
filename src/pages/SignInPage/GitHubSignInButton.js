@@ -15,7 +15,7 @@ export default () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Button variant='contained' color='primary' sx={{ height: 50 }}>
+      <Button variant='contained' color='primary' sx={{ height: 46 }}>
         <GitHub fontSize='large' />
         <Box width={12} />
         <Typography variant='button'>Sign in with GitHub</Typography>
