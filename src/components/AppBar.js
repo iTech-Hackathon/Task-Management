@@ -12,7 +12,7 @@ export default () => {
             component='img'
             src={TaskManagementLogoLight}
             sx={{ height: 50 }}
-          ></Box>
+          />
         </Box>
         <IconButton edge='start' color='inherit' aria-label='menu'>
           <Logout fontSize='large' />
