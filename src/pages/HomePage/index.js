@@ -1,7 +1,9 @@
 import { Typography } from '@mui/material';
 
+import { AppBar } from '../../components';
+
 const HomePage = () => {
-  return <Typography variant='h1'>Home Page</Typography>;
+  return <AppBar></AppBar>;
 };
 
 export default HomePage;
