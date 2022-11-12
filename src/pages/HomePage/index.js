@@ -1,7 +1,5 @@
 import { AppBar } from '../../components';
 
-const HomePage = () => {
-  return <AppBar></AppBar>;
+export default () => {
+  return <AppBar />;
 };
-
-export default HomePage;
