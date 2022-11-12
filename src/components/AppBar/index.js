@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, IconButton, Box } from '@mui/material';
 import { Logout } from '@mui/icons-material';
 
-import TaskManagementLogoLight from '../../assets/Task Management Logo - Light.png';
+import TaskManagementLogo from '../../assets/Task Management Logo - Light.png';
 
 export default () => {
   return (
