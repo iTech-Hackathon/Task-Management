@@ -1,3 +1,4 @@
 import AppBar from './AppBar';
+import SideBar from './SideBar';
 
-export { AppBar };
+export { AppBar, SideBar };
