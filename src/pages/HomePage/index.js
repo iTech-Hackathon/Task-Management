@@ -1,5 +1,11 @@
-import { AppBar } from '../../components';
+import { AppBar, SideBar } from '../../components';
+import { Box } from '@mui/material';
 
 export default () => {
-  return <AppBar />;
+  return (
+    <Box>
+      <SideBar />
+      <AppBar />
+    </Box>
+  );
 };
