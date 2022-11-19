@@ -13,6 +13,7 @@ import {
   ThemeProvider,
   Toolbar,
   Typography,
+  Button,
 } from '@mui/material';
 
 import {
@@ -23,6 +24,7 @@ import {
 } from '@mui/icons-material';
 import theme from '../theme';
 import ProjectLogo from '../assets/Project Logo.svg';
+import DashboardIcon from '../assets/DashboardIcon.svg';
 
 export default () => {
   const [indexClick, setIndexClick] = useState(null);
@@ -69,7 +71,7 @@ export default () => {
       <Divider />
       <List>
         {['Projects', 'Archived'].map((text, index) => (
-          <Box>
+          <Box key={text}>
             <ListItem key={text} disablePadding>
               <ListItemButton onClick={() => handleClick(index)}>
                 {indexClick === index ? <ExpandLess /> : <ExpandMore />}
@@ -116,6 +118,20 @@ export default () => {
           open
         >
           {drawer}
+          <Button
+            variant='contained'
+            sx={{
+              p: '9px 0 8px',
+              m: '15px 14px 16px',
+              gap: '3px',
+              fontSize: '18px',
+              fontWeight: 'medium',
+              height: '42px',
+            }}
+          >
+            <Box component='img' src={DashboardIcon} />
+            DASHBOARD
+          </Button>
         </Drawer>
       </Box>
     </ThemeProvider>
