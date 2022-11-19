@@ -118,6 +118,7 @@ export default () => {
           open
         >
           {drawer}
+          <Divider />
           <Button
             variant='contained'
             sx={{
