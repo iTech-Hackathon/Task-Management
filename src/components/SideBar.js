@@ -25,10 +25,11 @@ import theme from '../theme';
 import ProjectLogo from '../assets/Project Logo.svg';
 
 export default () => {
-  const [open, setOpen] = useState(false);
+  const [indexClick, setIndexClick] = useState(null);
 
-  const handleClick = () => {
-    setOpen(!open);
+  const handleClick = (index) => {
+    setIndexClick(index);
+    if (indexClick === index) setIndexClick(null);
   };
 
   const drawer = (
@@ -68,12 +69,12 @@ export default () => {
         {['Projects', 'Archived'].map((text, index) => (
           <Box>
             <ListItem key={text} disablePadding>
-              <ListItemButton onClick={handleClick}>
-                {open ? <ExpandLess /> : <ExpandMore />}
+              <ListItemButton onClick={() => handleClick(index)}>
+                {indexClick === index ? <ExpandLess /> : <ExpandMore />}
                 <ListItemText primary={text} sx={{ pl: 2 }} />
               </ListItemButton>
             </ListItem>
-            <Collapse in={open} timeout='auto' unmountOnExit>
+            <Collapse in={indexClick === index} timeout='auto' unmountOnExit>
               <List component='div' disablePadding>
                 <ListItemButton sx={{ pl: 4 }}>
                   <ListItemIcon>
