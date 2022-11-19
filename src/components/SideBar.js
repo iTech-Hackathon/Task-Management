@@ -41,6 +41,8 @@ export default () => {
           backgroundColor: theme.palette.primary.main,
           gap: '13px',
           p: '31px 119px 42px 19px',
+
+          '	.MuiToolbar-root': {},
         }}
       >
         <Box component='img' src={ProjectLogo} width={80} height={80} />
@@ -107,6 +109,7 @@ export default () => {
             display: { xs: 'none', sm: 'block' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
+              backgroundColor: 'transparent',
               width: '360px',
             },
           }}
