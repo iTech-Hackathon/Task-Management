@@ -5,22 +5,32 @@ export default () => {
   return (
     <Box>
       <SideBar />
-      <AppBar />
-      <Box component='main'>
+      <Box
+        position='relative'
+        sx={{
+          ml: { xs: '0', sm: '360px' },
+        }}
+      >
+        <AppBar />
         <Box
+          position='relative'
           sx={{
-            ml: {
-              lg: '380px',
-              sm: '0',
-            },
-            mt: '100px',
-            display: 'flex',
-            gap: '24px',
+            width: 1,
+            height: 1,
+            // backgroundColor: 'red',
           }}
-          position='absolute'
         >
-          <Tasks />
-          <Tasks />
+          <Box
+            sx={{
+              p: 3,
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '24px',
+            }}
+          >
+            <Tasks />
+            <Tasks />
+          </Box>
         </Box>
       </Box>
     </Box>

@@ -39,13 +39,72 @@ export default () => {
       judul: 'Membuat halaman landing',
       date: '#202203-01-02',
     },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
+    {
+      id: '5',
+      judul: 'Membuat halaman landing',
+      date: '#202203-01-02',
+    },
   ];
   return (
     <ThemeProvider theme={theme}>
       <Box
         sx={{
-          width: '510px',
-          mb: '17px',
+          width: 1,
           boxShadow: '0 0 4px 0 rgba(0, 0, 0, .5)',
           borderRadius: '5px',
         }}

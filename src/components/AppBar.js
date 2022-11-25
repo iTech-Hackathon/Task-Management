@@ -5,33 +5,25 @@ import TaskManagementLogoLight from '../assets/Task Management Logo - Light.png'
 
 export default () => {
   return (
-    <Box
-      component='div'
-      position='relative'
-      sx={{
-        ml: { xs: '0', sm: '260px' },
-      }}
-    >
-      <AppBar position='absolute' sx={{ py: 1 }}>
-        <Toolbar variant='regular'>
+    <AppBar position='relative' sx={{ py: 1 }}>
+      <Toolbar variant='regular'>
+        <Box
+          sx={{
+            width: 1,
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <Box
-            sx={{
-              width: 1,
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-          >
-            <Box
-              component='img'
-              src={TaskManagementLogoLight}
-              sx={{ height: 50 }}
-            />
-          </Box>
-          <IconButton edge='start' color='inherit' aria-label='menu'>
-            <Logout fontSize='large' />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-    </Box>
+            component='img'
+            src={TaskManagementLogoLight}
+            sx={{ height: 50 }}
+          />
+        </Box>
+        <IconButton edge='start' color='inherit' aria-label='menu'>
+          <Logout fontSize='large' />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   );
 };
