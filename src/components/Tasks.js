@@ -4,102 +4,28 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemText,
   ThemeProvider,
   Typography,
 } from '@mui/material';
+import { useEffect, useState } from 'react';
 import ActiveTask from '../assets/Active Tasks.svg';
+import CompletedTask from '../assets/Completed Tasks.svg';
 import theme from '../theme';
 
-export default () => {
-  // data sementara aja dulu
-  const tasks = [
-    {
-      id: '1',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '2',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '3',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '4',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-    {
-      id: '5',
-      judul: 'Membuat halaman landing',
-      date: '#202203-01-02',
-    },
-  ];
+export default ({ heading, tasks }) => {
+  const [task, setTask] = useState([]);
+
+  useEffect(() => {
+    const data = tasks.filter((task) => {
+      if (heading === 'Active Tasks') return task.isCompleted === false;
+      else if (heading === 'Completed Tasks') return task.isCompleted === true;
+    });
+    setTask(data);
+  }, []);
+
+  const handleChecked = (check, id) => {
+    console.log(check, id);
+  };
   return (
     <ThemeProvider theme={theme}>
       <Box
@@ -122,8 +48,8 @@ export default () => {
         >
           <Box
             component='img'
-            src={ActiveTask}
-            alt='Logo Active Task'
+            src={heading === 'Active Tasks' ? ActiveTask : CompletedTask}
+            alt={`logo ${heading}`}
             width='28'
             height='28'
           />
@@ -132,12 +58,12 @@ export default () => {
             color='primary.contrastText'
             sx={{ fontSize: '18px' }}
           >
-            Active Tasks
+            {heading}
           </Typography>
         </Box>
         <List
           sx={{
-            width: '100%',
+            width: 1,
             p: '9px 7px',
             boxSizing: 'border-box',
             display: 'flex',
@@ -145,7 +71,7 @@ export default () => {
             gap: '7px',
           }}
         >
-          {tasks.map((value) => {
+          {task.map((value) => {
             return (
               <ListItem
                 key={value.id}
@@ -156,7 +82,10 @@ export default () => {
                   gap: '15px',
                 }}
               >
-                <Checkbox />
+                <Checkbox
+                  defaultChecked={value.isCompleted ? true : false}
+                  onClick={(e) => handleChecked(e.target.checked, value.id)}
+                />
                 <ListItemButton
                   sx={{
                     p: '8.5px 0',
@@ -166,13 +95,18 @@ export default () => {
                 >
                   <Typography
                     variant='h4'
-                    sx={{ fontSize: '16px', fontWeight: 'regular', mb: '4px' }}
+                    sx={{
+                      fontSize: '16px',
+                      fontWeight: '500',
+                      mb: '4px',
+                      width: 1,
+                    }}
                   >
                     {value.judul}
                   </Typography>
                   <Typography
                     variant='body1'
-                    sx={{ fontSize: '12px', fontWeight: 'regular' }}
+                    sx={{ fontSize: '12px', fontWeight: '400', width: 1 }}
                   >
                     {value.date}
                   </Typography>
