@@ -46,7 +46,6 @@ export default () => {
           pr: '119px',
           pb: '42px',
           pl: '19px',
-
           '	.MuiToolbar-root': {},
         }}
       >
