@@ -83,13 +83,12 @@ export default () => {
           sx={{
             width: 1,
             height: 1,
-            // backgroundColor: 'red',
             display: isShow ? 'none' : 'block',
           }}
         >
           <Box
             sx={{
-              p: 3,
+              p: 2,
               display: 'flex',
               flexDirection: {
                 lg: 'row',
@@ -109,7 +108,14 @@ export default () => {
             />
           </Box>
         </Box>
-        <TaskDetail setIsShow={setIsShow} isShow={isShow} />
+        <Box
+          position='relative'
+          sx={{
+            width: 1,
+          }}
+        >
+          <TaskDetail setIsShow={setIsShow} isShow={isShow} />
+        </Box>
       </Box>
     </Box>
   );
