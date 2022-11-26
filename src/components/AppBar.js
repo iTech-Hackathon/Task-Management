@@ -15,23 +15,15 @@ export default () => {
           }}
         >
           <Box
-            sx={{
-              width: 1,
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-          >
-            <Box
-              component='img'
-              src={TaskManagementLogoLight}
-              sx={{ height: 50 }}
-            />
-          </Box>
-          <IconButton edge='start' color='inherit' aria-label='menu'>
-            <Logout fontSize='large' />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-    </Box>
+            component='img'
+            src={TaskManagementLogoLight}
+            sx={{ height: 50 }}
+          />
+        </Box>
+        <IconButton edge='start' color='inherit' aria-label='menu'>
+          <Logout fontSize='large' />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   );
 };
