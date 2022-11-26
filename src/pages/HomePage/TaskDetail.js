@@ -19,7 +19,7 @@ export default ({ setIsShow, isShow }) => {
 
     useEffect(() => {
       fetch(
-        'https://raw.githubusercontent.com/iTech-Hackathon/Task-Management/main/docs/Specifications.md'
+        'https://gist.githubusercontent.com/afifabroory/4ff11d19ae641499712dbaf3ffcac651/raw/b2fda59b9c12d0e08bc5d3c09873aaaeb5f8f4af/sadsd'
       ).then(async (a) =>
         setContent(
           <div
