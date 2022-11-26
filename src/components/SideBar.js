@@ -43,7 +43,7 @@ export default () => {
           backgroundColor: theme.palette.primary.main,
           gap: '13px',
           pr: '119px',
-          py: '40px',
+          py: '36.5px',
           pl: '19px',
           '	.MuiToolbar-root': {},
         }}
