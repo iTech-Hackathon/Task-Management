@@ -1,3 +1,4 @@
+import { CheckCircle, RadioButtonUnchecked } from '@mui/icons-material';
 import {
   Box,
   Checkbox,
@@ -88,6 +89,8 @@ export default ({ heading, tasks }) => {
                 <Checkbox
                   defaultChecked={value.isCompleted ? true : false}
                   onClick={(e) => handleChecked(e.target.checked, value.id)}
+                  icon={<RadioButtonUnchecked/>}
+                  checkedIcon={<CheckCircle/>}
                 />
                 <ListItemButton
                   sx={{
