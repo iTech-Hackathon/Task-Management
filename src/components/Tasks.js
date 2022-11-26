@@ -13,7 +13,7 @@ import ActiveTask from '../assets/Active Tasks.svg';
 import CompletedTask from '../assets/Completed Tasks.svg';
 import theme from '../theme';
 
-export default ({ heading, tasks }) => {
+export default ({ heading, tasks, setIsShow }) => {
   const [task, setTask] = useState([]);
 
   useEffect(() => {
@@ -26,6 +26,10 @@ export default ({ heading, tasks }) => {
 
   const handleChecked = (check, id) => {
     console.log(check, id);
+  };
+
+  const handleDetail = (value) => {
+    setIsShow(true);
   };
   return (
     <ThemeProvider theme={theme}>
@@ -89,8 +93,8 @@ export default ({ heading, tasks }) => {
                 <Checkbox
                   defaultChecked={value.isCompleted ? true : false}
                   onClick={(e) => handleChecked(e.target.checked, value.id)}
-                  icon={<RadioButtonUnchecked/>}
-                  checkedIcon={<CheckCircle/>}
+                  icon={<RadioButtonUnchecked />}
+                  checkedIcon={<CheckCircle />}
                 />
                 <ListItemButton
                   sx={{
@@ -99,6 +103,7 @@ export default ({ heading, tasks }) => {
                     display: 'flex',
                     flexDirection: 'column',
                   }}
+                  onClick={(e) => handleDetail(value)}
                 >
                   <Typography
                     variant='h4'
