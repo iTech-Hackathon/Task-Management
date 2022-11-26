@@ -1,4 +1,6 @@
 import { AppBar, SideBar, Tasks } from '../../components';
+import { AppBar, SideBar } from '../../components';
+import { AppBar, SideBar, Tasks, DetailTask } from '../../components';
 import { Box } from '@mui/material';
 
 export default () => {
@@ -68,6 +70,7 @@ export default () => {
   return (
     <Box>
       <SideBar />
+      <AppBar />
       <Box
         position='relative'
         sx={{
@@ -86,6 +89,9 @@ export default () => {
           <Box
             sx={{
               p: 3,
+          {/* <Box
+            sx={{
+              p: 2,
               display: 'flex',
               flexDirection: {
                 lg: 'row',
@@ -99,6 +105,9 @@ export default () => {
           >
             <Tasks heading='Active Tasks' tasks={tasks} />
             <Tasks heading='Completed Tasks' tasks={tasks} />
+          </Box> */}
+          <Box>
+            <DetailTask />
           </Box>
         </Box>
       </Box>

@@ -44,6 +44,10 @@ export default () => {
           gap: '13px',
           pr: '119px',
           py: '40px',
+          p: '31px 119px 42px 19px',
+
+          pr: '119px',
+          py: '36px',
           pl: '19px',
           '	.MuiToolbar-root': {},
         }}
