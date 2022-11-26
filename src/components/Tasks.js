@@ -40,7 +40,8 @@ export default ({ heading, tasks }) => {
             backgroundColor: theme.palette.primary.main,
             display: 'flex',
             alignItems: 'center',
-            p: '14px 0 14px 14px',
+            py: '14px',
+            pl: '14px',
             gap: '7px',
             borderTopLeftRadius: '5px',
             borderTopRightRadius: '5px',
@@ -64,7 +65,8 @@ export default ({ heading, tasks }) => {
         <List
           sx={{
             width: 1,
-            p: '9px 7px',
+            py: '9px',
+            px: '7px',
             boxSizing: 'border-box',
             display: 'flex',
             flexDirection: 'column',
@@ -78,7 +80,8 @@ export default ({ heading, tasks }) => {
                 sx={{
                   boxShadow: '2px 2px 3px 0 rgba(0, 0, 0, .25)',
                   borderRadius: '8px',
-                  p: '0 0 0 20px',
+                  p: 0,
+                  pl: '20px',
                   gap: '15px',
                 }}
               >
@@ -88,7 +91,8 @@ export default ({ heading, tasks }) => {
                 />
                 <ListItemButton
                   sx={{
-                    p: '8.5px 0',
+                    py: '8.5px',
+                    px: 0,
                     display: 'flex',
                     flexDirection: 'column',
                   }}
