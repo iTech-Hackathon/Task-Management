@@ -1,7 +1,10 @@
 import { AppBar, SideBar, Tasks } from '../../components';
 import { Box } from '@mui/material';
+import { useState } from 'react';
+import TaskDetail from './TaskDetail';
 
 export default () => {
+  const [isShow, setIsShow] = useState(false);
   // data sementara aja dulu
   const tasks = [
     {
@@ -81,6 +84,7 @@ export default () => {
             width: 1,
             height: 1,
             // backgroundColor: 'red',
+            display: isShow ? 'none' : 'block',
           }}
         >
           <Box
@@ -97,10 +101,15 @@ export default () => {
               gap: '24px',
             }}
           >
-            <Tasks heading='Active Tasks' tasks={tasks} />
-            <Tasks heading='Completed Tasks' tasks={tasks} />
+            <Tasks heading='Active Tasks' tasks={tasks} setIsShow={setIsShow} />
+            <Tasks
+              heading='Completed Tasks'
+              tasks={tasks}
+              setIsShow={setIsShow}
+            />
           </Box>
         </Box>
+        <TaskDetail setIsShow={setIsShow} isShow={isShow} />
       </Box>
     </Box>
   );
