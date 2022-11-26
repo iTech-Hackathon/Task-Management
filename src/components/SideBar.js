@@ -42,8 +42,9 @@ export default () => {
           py: 1,
           backgroundColor: theme.palette.primary.main,
           gap: '13px',
-          p: '31px 119px 42px 19px',
-
+          pr: '119px',
+          py: '40px',
+          pl: '19px',
           '	.MuiToolbar-root': {},
         }}
       >
@@ -122,8 +123,12 @@ export default () => {
           <Button
             variant='contained'
             sx={{
-              p: '9px 0 8px',
-              m: '15px 14px 16px',
+              pt: '9px',
+              pb: '8px',
+              px: 0,
+              mt: '15px',
+              mx: '14px',
+              mb: '16px',
               gap: '3px',
               fontSize: '18px',
               fontWeight: 'medium',
