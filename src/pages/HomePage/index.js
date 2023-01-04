@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 import { useState } from 'react';
 import TaskDetail from './TaskDetail';
 
-export default () => {
+export default ({isDashboard=false}) => {
   const [isShow, setIsShow] = useState(false);
   // data sementara aja dulu
   const tasks = [

@@ -48,7 +48,7 @@ const SignOutButton = () => {
       <AlertDialog
         isOpen={isDialogOpen}
         title='Sign Out?'
-        content='Are you sure you want sign out?'
+        contentText='Are you sure you want sign out?'
         actions={
           <>
             <Button onClick={closeDialog}>CANCEL</Button>

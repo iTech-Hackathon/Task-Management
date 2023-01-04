@@ -14,6 +14,8 @@ import {
   Toolbar,
   Typography,
   Button,
+  IconButton,
+  TextField,
 } from '@mui/material';
 
 import {
@@ -21,12 +23,17 @@ import {
   Mail as MailIcon,
   ExpandLess,
   ExpandMore,
+  Add,
 } from '@mui/icons-material';
 import theme from '../theme';
 import ProjectLogo from '../assets/Project Logo.svg';
 import DashboardIcon from '../assets/DashboardIcon.svg';
+import { IS_ADMIN } from '../sementara';
+import { useNavigate } from 'react-router-dom';
+import AlertDialog from './AlertDialog';
 
 export default () => {
+  const navigate = useNavigate();
   const [indexClick, setIndexClick] = useState(null);
 
   const handleClick = (index) => {
@@ -73,7 +80,11 @@ export default () => {
       <List>
         {['Projects', 'Archived'].map((text, index) => (
           <Box key={text}>
-            <ListItem key={text} disablePadding>
+            <ListItem
+              key={text}
+              disablePadding
+              secondaryAction={text === 'Projects' && <AddProjectButton />}
+            >
               <ListItemButton onClick={() => handleClick(index)}>
                 {indexClick === index ? <ExpandLess /> : <ExpandMore />}
                 <ListItemText primary={text} sx={{ pl: 2 }} />
@@ -120,26 +131,65 @@ export default () => {
         >
           {drawer}
           <Divider />
-          <Button
-            variant='contained'
-            sx={{
-              pt: '9px',
-              pb: '8px',
-              px: 0,
-              mt: '15px',
-              mx: '14px',
-              mb: '16px',
-              gap: '3px',
-              fontSize: '18px',
-              fontWeight: 'medium',
-              height: '42px',
-            }}
-          >
-            <Box component='img' src={DashboardIcon} />
-            DASHBOARD
-          </Button>
+          {IS_ADMIN && (
+            <Button
+              variant='contained'
+              sx={{
+                pt: '9px',
+                pb: '8px',
+                px: 0,
+                mt: '15px',
+                mx: '14px',
+                mb: '16px',
+                gap: '3px',
+                fontSize: '18px',
+                fontWeight: 'medium',
+                height: '42px',
+              }}
+              onClick={() => navigate('/dashboard')}
+            >
+              <Box component='img' src={DashboardIcon} />
+              DASHBOARD
+            </Button>
+          )}
         </Drawer>
       </Box>
     </ThemeProvider>
+  );
+};
+
+const AddProjectButton = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const showDialog = () => setIsDialogOpen(true);
+  const closeDialog = () => setIsDialogOpen(false);
+
+  return (
+    <>
+      <IconButton edge='end' onClick={showDialog}>
+        <Add />
+      </IconButton>
+      <AlertDialog
+        isOpen={isDialogOpen}
+        fullWidth={400}
+        title='Add new project'
+        onOutsideOfTheDialogClicked={closeDialog}
+        actions={
+          <>
+            <Button onClick={closeDialog}>CANCEL</Button>
+            <Button onClick={() => {}}>ADD</Button>
+          </>
+        }
+      >
+        <Box height={10} />
+        <TextField fullWidth label='Project ID' variant='outlined' />
+        <Box height={10} />
+        <TextField fullWidth label='Title' variant='outlined' />
+        <Box height={10} />
+        <TextField fullWidth label='Icon URL' variant='outlined' />
+        <Box height={10} />
+        <TextField fullWidth label='Description URL' variant='outlined' />
+      </AlertDialog>
+    </>
   );
 };

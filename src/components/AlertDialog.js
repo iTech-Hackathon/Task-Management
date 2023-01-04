@@ -8,14 +8,19 @@ import {
 
 export default ({
   isOpen,
+  maxWidth,
+  fullWidth,
   title,
-  content,
+  contentText,
+  children,
   actions,
   onOutsideOfTheDialogClicked,
 }) => {
   return (
     <Dialog
       open={isOpen}
+      maxWidth={maxWidth}
+      fullWidth={fullWidth}
       onClose={onOutsideOfTheDialogClicked}
       aria-labelledby='alert-dialog-title'
       aria-describedby='alert-dialog-description'
@@ -23,8 +28,9 @@ export default ({
       <DialogTitle id='alert-dialog-title'>{title}</DialogTitle>
       <DialogContent>
         <DialogContentText id='alert-dialog-description'>
-          {content}
+          {contentText}
         </DialogContentText>
+        {children}
       </DialogContent>
       <DialogActions>{actions}</DialogActions>
     </Dialog>
